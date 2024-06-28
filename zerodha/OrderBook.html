@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bids and Asks</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 50%;
+        margin: 20px auto;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+      }
+
+      th:nth-child(-n + 2),
+      td:nth-child(-n + 2) {
+        background-color: lightgreen;
+      }
+
+      th:nth-last-child(-n + 2),
+      td:nth-last-child(-n + 2) {
+        background-color: lightpink;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Bids and Asks</h2>
+    <table id="orderBook">
+      <thead>
+        <tr>
+          <th>Bid Price</th>
+          <th>Bid Quantity</th>
+          <th>Ask Price</th>
+          <th>Ask Quantity</th>
+        </tr>
+      </thead>
+      <tbody id="orderBookBody"></tbody>
+    </table>
+    <script src="./OrderBook.js"></script>
+    <script>
+      // Sample bid and ask orders
+
+      // Function to display bid and ask orders in the table
+      function displayOrders() {
+        const tableBody = document.getElementById('orderBookBody');
+        tableBody.innerHTML = ''; // Clear previous content
+
+        // Display bid and ask orders row by row
+        for (let i = 0; i < Math.max(bidOrders.length, askOrders.length); i++) {
+          const bidOrder = bidOrders[i] || {};
+          const askOrder = askOrders[i] || {};
+
+          const bidPrice = bidOrder.price || '';
+          const bidQuantity = bidOrder.quantity || '';
+          const askPrice = askOrder.price || '';
+          const askQuantity = askOrder.quantity || '';
+
+          const row = `
+                <tr>
+                    <td>${bidPrice}</td>
+                    <td>${bidQuantity}</td>
+                    <td>${askPrice}</td>
+                    <td>${askQuantity}</td>
+                </tr>
+            `;
+          tableBody.innerHTML += row;
+        }
+      }
+
+      // Initial display of orders
+      displayOrders();
+    </script>
+  </body>
+</html>

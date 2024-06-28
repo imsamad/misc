@@ -1,0 +1,13 @@
+https://dev.to/codesphere/how-to-start-contributing-to-open-source-projects-on-github-534n
+
+1. A pull request (or PR) is a way to notify the owners of a repository that you want to make changes to their code. It enables them to review the code and ensure that it looks good before committing your changes to the main branch.
+2. For every new bug fix or feature, create a new pull request. If a branch already has a pull request associated with it, it’ll not allow us to create a new pull request. This means a single branch can only make a single pull request.
+3. git remote -v: The repository link via which the project is downloaded.
+4. "git remote add upstream link_of_forked/main_project" and
+"git pull upstream master": If someone made changes to the original master branch, to stay updated.
+
+** To make sure that our forked version’s main branch is the same as that of the upstream's main branch
+    => Checkout to the main branch.
+    => git pull upstream main/master.
+    => If the above step results into an error, fix it using: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/configuring-a-remote-repository-for-a-fork
+    => git push origin main/master

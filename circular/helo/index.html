@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-height: 200vh;
+        overflow: scroll;
+      }
+      .container {
+        height: 85vh;
+        border: 2px solid red;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .box {
+        position: absolute;
+        bottom: -350px;
+        right: -350px;
+        height: 700px;
+        width: 700px;
+        border-radius: 50%;
+        transition: transform 0.1s;
+      }
+
+      .imgBox {
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        outline: 3px solid red;
+        transition: transform 0.1s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <img class="imgBox" src="https://github.com/imsamad.png" alt="" />
+        <img class="imgBox" src="https://github.com/imsamad.png" alt="" />
+        <img class="imgBox" src="https://github.com/imsamad.png" alt="" />
+        <img class="imgBox" src="https://github.com/imsamad.png" alt="" />
+        <img class="imgBox" src="https://github.com/imsamad.png" alt="" />
+        <img class="imgBox" src="https://github.com/imsamad.png" alt="" />
+        <img class="imgBox" src="https://github.com/imsamad.png" alt="" />
+        <img class="imgBox" src="https://github.com/imsamad.png" alt="" />
+        <img class="imgBox" src="https://github.com/imsamad.png" alt="" />
+        <img class="imgBox" src="https://github.com/imsamad.png" alt="" />
+      </div>
+    </div>
+    <div id="text"></div>
+    <script>
+      let num = 10;
+      let radius = 700 / 2;
+      let imgs = document.querySelectorAll('.imgBox');
+
+      imgs.forEach((img, idx) => {
+        let radian = (idx * (360 / num) * Math.PI) / 180;
+        let left = `${50 + Math.cos(radian) * 50}%`;
+        let top = `${50 + Math.sin(radian) * 50}%`;
+
+        img.style.left = left;
+        img.style.top = top;
+        img.alt = idx;
+      });
+
+      const h1 = `<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus exercitationem atque asperiores maxime maiores repellendus consequuntur, quibusdam nemo minima. Amet, quam modi aspernatur veritatis ipsam libero magnam fugit dolores qui!</h1>`;
+      let text = '';
+      [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].forEach(() => {
+        text += h1;
+      });
+
+      document.getElementById('text').innerHTML = text;
+
+      let lastScrollTop = 0;
+      window.addEventListener('scroll', () => {
+        let st = window.pageYOffset || document.documentElement.scrollTop;
+        let box = document.querySelector('.box');
+        lastScrollTop = st <= 0 ? 0 : st;
+        if (st > lastScrollTop) {
+          box.style.transform = `rotate(${
+            ((lastScrollTop ? -1 : 1) * window.scrollY) / 3
+          }deg)`;
+        } else {
+          box.style.transform = `rotate(${
+            ((lastScrollTop ? -1 : 1) * -window.scrollY) / 3
+          }deg)`;
+        }
+
+        lastScrollTop = st <= 0 ? 0 : st;
+
+        imgs.forEach((img, idx) => {
+          if (idx % 2 === 0) {
+            // Even
+            img.style.transform = 'scale(1.2)';
+          } else {
+            // Odd
+            img.style.transform = 'scale(0.8)';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

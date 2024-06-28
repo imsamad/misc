@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="icon">
+        <div class="imgBox" style="--i: 0">
+          <img src="" alt="" />
+        </div>
+        <div class="imgBox" style="--i: 1">
+          <img src="" alt="" />
+        </div>
+        <div class="imgBox" style="--i: 2">
+          <img src="" alt="" />
+        </div>
+        <div class="imgBox" style="--i: 3">
+          <img src="" alt="" />
+        </div>
+        <div class="imgBox" style="--i: 4">
+          <img src="" alt="" />
+        </div>
+        <div class="imgBox" style="--i: 5">
+          <img src="" alt="" />
+        </div>
+        <div class="imgBox" style="--i: 6">
+          <img src="" alt="" />
+        </div>
+        <div class="imgBox" style="--i: 7">
+          <img src="" alt="" />
+        </div>
+      </div>
+    </div>
+    <script>
+      const urls = [
+        'http://res.cloudinary.com/dnkb5aetl/image/upload/v1652524340/avatar/0-fgiovannilli0.jpg',
+        'http://res.cloudinary.com/dnkb5aetl/image/upload/v1652524520/avatar/1-astuchbery1.jpg',
+        'http://res.cloudinary.com/dnkb5aetl/image/upload/v1652524522/avatar/10-cchaslea.jpg',
+        'http://res.cloudinary.com/dnkb5aetl/image/upload/v1652524521/avatar/100-jdakin2s.jpg',
+        'http://res.cloudinary.com/dnkb5aetl/image/upload/v1652524522/avatar/101-lschollick2t.jpg',
+        'http://res.cloudinary.com/dnkb5aetl/image/upload/v1652524521/avatar/102-estent2u.jpg',
+        'http://res.cloudinary.com/dnkb5aetl/image/upload/v1652524522/avatar/103-ipolle2v.jpg',
+        'http://res.cloudinary.com/dnkb5aetl/image/upload/v1652524521/avatar/104-cgwillim2w.jpg',
+        'http://res.cloudinary.com/dnkb5aetl/image/upload/v1652524521/avatar/105-dbucktrout2x.jpg',
+        'http://res.cloudinary.com/dnkb5aetl/image/upload/v1652524521/avatar/106-nstannislawski2y.jpg',
+      ];
+
+      const imgs = document.querySelectorAll('img');
+      let count = 0;
+      imgs.forEach((img) => {
+        img.setAttribute('src', urls[count++]);
+      });
+    </script>
+    <script src="./js.js"></script>
+  </body>
+</html>

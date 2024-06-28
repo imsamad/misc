@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./stylesheets/util.css" />
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <link rel="stylesheet" href="./stylesheets/media-query.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="./js/script.js" defer></script>
+    <script src="./js/wordHighlight.js" defer></script>
+    <script src="./js/navbar.js" defer></script>
+    <script src="./js/modal.js" defer></script>
+    <script src="./js/welcomeSection.js" defer></script>
+    <script src="./js/numSection.js" defer></script>
+    <script src="./js/hamburgerMenu.js" defer></script>
+    <!-- <script src="./js/flipCardSection.js" defer></script> -->
+    <title>Exploria | Experience Redefined</title>
+</head>
+
+<body class="body">
+    <header class="header" id="home">
+        <nav class="navbar">
+            <div class="logo_container">
+                <img src="./img/navbar_log.svg" alt="logo" />
+            </div>
+            <div class="hack_navbar">
+                <div class="nav_items_container">
+                    <ul class="flex_center | nav_list">
+                        <li class="util_link_hover list_item"><a href="#home" data-hover="HOME">HOME</a></li>
+
+                        <li class="util_link_hover list_item"><a href="#destinations"
+                                data-hover="DESTINATIONS">DESTINATIONS</a></li>
+
+                        <li class="util_link_hover list_item"><a href="#prices" data-hover="PRICES">PRICES</a></li>
+                        <li class="util_link_hover list_item"><a href="#testimonials"
+                                data-hover="TESTIMONIALS">TESTIMONIALS</a></li>
+                    </ul>
+                    <button class="btn btn_gradient | schedule_btn"><span>SCHEDULE NOW </span></button>
+                </div>
+            </div>
+            <div class="hamburger_container">
+                <div class="bar top_bar"></div>
+                <div class="bar middle_bar"></div>
+                <div class="bar bottom_bar"></div>
+            </div>
+        </nav>
+        <section class="hero_section">
+            <img src="./img/hero_image.jpeg" alt="hero section image" class="hero_image" />
+            <div class="hero_content_container | text_invisibility">
+                <div class="hero_first_content">
+                    <h1 class="hero_title | hero_title_styling">
+                        <p class="heading_extrabold">UNLEASH
+                            <span class="small_title">the explorer in
+                            </span>
+                        </p>
+                        <p class="heading_extrabold">YOURSELF</p>
+                    </h1>
+                    <button class="btn flex_center | explore_btn | btn_box btn_bar">EXPLORE
+                        <img src="./img/right-lg.svg" alt="right arrow" class="right_arrow" /></button>
+                </div>
+                <p class="hero_text">
+                    Immerse yourself with different cultures and learn about
+                    world and its people...
+                </p>
+            </div>
+        </section>
+    </header>
+    <main class="main">
+        <!-- WELCOME SECTION -->
+        <section class="section_wrapper">
+            <div class="flex_center section | welcome_section">
+                <h2 class="heading_semibold | section_title">WELCOME TO <span class="word_highlight">
+                        <p>EXPLORIA</p>
+                    </span>
+                </h2>
+                <div class="stacking_container">
+                    <!-- We have the content already filled, as a backup: -->
+                    <div class="flex_center | left_fixed | left_fixed_styling">Exciting tours for adventurers</div>
+                    <div class="right_scrolling_container">
+                        <div class="welcome_card welcome_card-1" data-title="Exciting tours for adventurers"
+                            data-bg="../img/welcome-image-1.jpg">
+                            <div class="welcome_icon">
+                                <img src="./img/globe.svg" alt="globe img" />
+                            </div>
+                            <div class="welcome_content">
+                                <p>From breathtaking hikes through rugged landscapes to thrilling wildlife safarisour,
+                                    perfect blend of adrenaline and exploration.</p>
+                                <p> Discover hidden gems, indulge in thrilling activities, and create memories that will
+                                    last a lifetime.</p>
+                                <p>Get ready to experience the world like never before!</p>
+                            </div>
+                        </div>
+                        <div class="welcome_card welcome_card-2" data-title="Safety first approach"
+                            data-bg="../img/welcome-image-2.jpg">
+                            <div class="welcome_icon">
+                                <img src="./img/doctor-bag.svg" alt="globe img" />
+                            </div>
+                            <div class="welcome_content">
+                                <p>At Exploria, your safety is our utmost priority. We understand that peace of mind is
+                                    essential.</p>
+                                <p>We prioritize your well-being.Thorough research and comprehensive risk assessments
+                                    ensure safety in all activities.</p>
+                                <p>Discover the world with confidence and our unwavering commitment to your safety.</p>
+                            </div>
+                        </div>
+                        <div class="welcome_card welcome_card-3" data-title="Exquisite Travel Experiences"
+                            data-bg="../img/welcome-image-3.jpg">
+                            <div class="welcome_icon">
+                                <img src="./img/medal.png" alt="globe img" />
+                            </div>
+                            <div class="welcome_content">
+                                <p>Wake up to breathtaking views, be pampered with world-class amenities, and savor
+                                    delectable cuisine.</p>
+                                <p>Enjoy VIP access to renowned attractions. Front-row seats to cultural performances
+                                    and exclusive guided tours.</p>
+                                <p>Immerse yourself in luxury as we make your travel dreams a reality. Prepare to be
+                                    enchanted.</p>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+        <!-- DESTINATIONS SECTION -->
+        <section class="section_grad | section_wrapper">
+            <div class="flex_center section | destination_section" id="destinations">
+
+                <h2 class="heading_semibold | section_title">PUTTING <span class="word_highlight travels">
+                        <p>TRAVELS</p>
+                    </span> <br class="line_break">IN YOUR HANDS</h2>
+
+                <div class="grid_container">
+                    <div class="box flex_center | box-1">
+                        <div class=" content_container">
+                            <h4 class="description">EXPLORE</h4>
+                            <h3 class="place_name">India</h3>
+                        </div>
+                    </div>
+                    <div class="box flex_center vertical_boxes| box-2">
+                        <div class=" content_container text_right">
+                            <h4 class="description">uncover</h4>
+                            <h3 class="place_name">australia</h3>
+                        </div>
+                    </div>
+                    <div class="box flex_center | box-3">
+                        <div class=" content_container text_center">
+                            <h4 class="description">paradise</h4>
+                            <h3 class="place_name">bali</h3>
+                        </div>
+                    </div>
+                    <div class="box flex_center vertical_boxes| box-4">
+                        <div class=" content_container">
+                            <h4 class="description">discover</h4>
+                            <h3 class="place_name">peru</h3>
+                        </div>
+                    </div>
+                    <div class="box flex_center | box-5">
+                        <div class=" content_container text_right">
+                            <h4 class="description">adventure</h4>
+                            <h3 class="place_name">hawaii</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- PRICES SECTION -->
+        <section class="section_grad | section_wrapper">
+            <div class="flex_center section |  prices_section" id="prices">
+
+                <h2 class="heading_semibold | section_title">BUDGET FRIENDLY <br class="line_break"><span
+                        class="word_highlight travels">
+                        <p>PRICES</p>
+                    </span> </h2>
+
+                <div class=" flex_center | price_cards_container">
+
+                    <div class="flip_hover">
+
+                        <div class="price_card price_card-1 ">
+                            <div class="front">
+                                <div class="flip_img-1 flip_img_styling">
+                                    <h2 class="flip_title">SOLO TRAVELER</h2>
+                                </div>
+                                <div class="flip_detail_cont">
+                                    <!-- <div class="flip_detail"> -->
+                                    <ul class="flip_list">
+                                        <li class="flip_li">
+                                            <div class="flex_center"><img src="../img/Vector.svg" alt=""></div>
+                                            <p>21 days journey</p>
+                                        </li>
+                                        <li class="flip_li">
+                                            <div class="flex_center"><img src="../img/Vector.svg" alt=""></div>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+                                        </li>
+                                        <li class="flip_li">
+                                            <div class="flex_center"><img src="../img/Vector.svg" alt=""></div>
+                                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                        </li>
+                                        <li class="flip_li">
+                                            <div class="flex_center"><img src="../img/Vector.svg" alt=""></div>
+                                            <p>Lorem ipsum dolor sit</p>
+                                        </li>
+                                    </ul>
+                                    <!-- </div> -->
+                                    <div class="flip_price">
+                                        <img src="./img/₹_dark.svg" alt="rupee symbol" class="rupee_sign">
+                                        15,200
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex_center | back">
+                                <button class="btn flip_back_btn">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip_hover">
+                        <div class="price_card price_card-2 " data-best-value="BEST VALUE">
+                            <div class="front">
+                                <div class="flip_img-2 flip_img_styling">
+                                    <h2 class="flip_title">FAMILY LOVER</h2>
+                                </div>
+                                <div class="flip_detail_cont">
+                                    <!-- <div class="flip_detail"> -->
+                                    <ul class="flip_list">
+                                        <li class="flip_li">
+                                            <div class="flex_center"><img src="../img/Vector.svg" alt=""></div>
+                                            <p>21 days journey</p>
+                                        </li>
+                                        <li class="flip_li">
+                                            <div class="flex_center"><img src="../img/Vector.svg" alt=""></div>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+                                        </li>
+                                        <li class="flip_li">
+                                            <div class="flex_center"><img src="../img/Vector.svg" alt=""></div>
+                                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                        </li>
+                                        <li class="flip_li">
+                                            <div class="flex_center"><img src="../img/Vector.svg" alt=""></div>
+                                            <p>Lorem ipsum dolor sit</p>
+                                        </li>
+                                    </ul>
+                                    <!-- </div> -->
+                                    <div class="flip_price">
+                                        <img src="./img/₹.svg" alt="rupee symbol" class="rupee_sign">
+                                        37,500
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex_center back">
+                                <button class="btn flip_back_btn">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip_hover">
+                        <div class="price_card price_card-3 ">
+                            <div class="front">
+                                <div class="flip_img-3 flip_img_styling">
+                                    <h2 class="flip_title">SEASONAL PACK</h2>
+                                </div>
+                                <div class="flip_detail_cont">
+                                    <!-- <div class="flip_detail"> -->
+                                    <ul class="flip_list">
+                                        <li class="flip_li">
+                                            <div class="flex_center"><img src="../img/Vector.svg" alt=""></div>
+                                            <p>21 days journey</p>
+                                        </li>
+                                        <li class="flip_li">
+                                            <div class="flex_center"><img src="../img/Vector.svg" alt=""></div>
+                                            <p>Lorem ipsum dolor sit amet.</p>
+                                        </li>
+                                        <li class="flip_li">
+                                            <div class="flex_center"><img src="../img/Vector.svg" alt=""></div>
+                                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                        </li>
+                                        <li class="flip_li">
+                                            <div class="flex_center"><img src="../img/Vector.svg" alt=""></div>
+                                            <p>Lorem ipsum dolor sit</p>
+                                        </li>
+                                    </ul>
+                                    <!-- </div> -->
+                                    <div class="flip_price">
+                                        <img src="./img/₹_dark.svg" alt="rupee symbol" class="rupee_sign">
+                                        16,700
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex_center back">
+                                <button class="btn flip_back_btn">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- TESTIMONIALS SECTION -->
+        <section class="section_grad | section_wrapper">
+
+            <div class="flex_center section | testimonial_section" id="testimonials">
+
+                <h2 class="heading_semibold | section_title testimonial_title"><span class="word_highlight travels">
+                        <p>FEEDBACK</p>
+                    </span> FROM OUR <br class="line_break">EXPLORIANS</h2>
+
+                <div class="flex_center | feedback_container">
+                    <div class="user_image">
+                        <img src="./img/feedback_img.jpeg" alt="">
+                    </div>
+                    <div class="quotes"><img src="./img/quote.svg" alt=""></div>
+                    <p class="feedback">
+                        Lorem ipsum dolor sit amet consectetur. Tempus duis sed ut velit. Vel suscipit libero risus
+                        imperdiet. Quis quis in quis nunc amet id velit a. Eget senectus cursus sagittis donec accumsan
+                        at. Vulputate risus dui vel tristique tincidunt gravida risus. Egestas blandit mi nisl sapien
+                        eget elit. Leo venenatis rhoncus pellentesque aliquam sodales. At facilisi luctus lorem arcu
+                        hendrerit.
+                    </p>
+                    <div class="user_rating_cont">
+                        <p class="user_name">SHALINI BANSAL</p>
+                        <div class="flex_center rating_cont">
+
+                            <div class="ratings">&starf;</div>
+                            <div class="ratings">&starf;</div>
+                            <div class="ratings">&starf;</div>
+                            <div class="ratings">&starf;</div>
+                            <div class="ratings">&starf;</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex_center dot_container">
+                    <div class="dot"></div>
+                    <div class="dot dot-active"></div>
+                    <div class="dot"></div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <!-- MODAL ASIDE -->
+    <aside class="flex_center modal_container hidden xTranslated">
+        <div class="flex_center | modal_title_cont">
+            <h2 class="modal_title-1">SCHEDULE YOUR TRIP</h2>
+            <h2 class="modal_title-2">RIGHT AWAY !!!</h2>
+        </div>
+        <form class="flex_center modal_form">
+            <div class="form_row">
+                <label for="name" class="modal_label">Name</label>
+                <input type="text" name="" id="name" class="modal_input">
+            </div>
+            <div class="form_row">
+                <label for="email" class="modal_label">Email</label>
+                <input type="email" name="" id="email" class="modal_input">
+            </div>
+            <div class="form_row">
+                <label for="phone_number" class="modal_label">Mobile</label>
+                <input type="number" name="" id="phone_number" class="modal_input">
+            </div>
+            <div class="form_row">
+                <label for="package" class="modal_label">Package</label>
+                <select name="" id="package" class="modal_input">
+                    <option value="solor_traveller">Solor Traveler</option>
+                    <option value="family_lover">Family Lover</option>
+                    <option value="seasonal_pack">Seasonal Pack</option>
+                </select>
+            </div>
+            <button type="submit" class="btn modal_btn btn_gradient">
+                <span>BOOK NOW</span></button>
+        </form>
+        </form>
+    </aside>
+    <aside class="modal_drop_shadow hidden">
+        <button><i class="fa-solid fa-xmark cross | modal_cross"></i></button>
+    </aside>
+    <aside class="hamburger hidden">
+        <ul class="flex_center | hamburger_nav_list">
+            <li class="util_link_hover list_item"><a href="#home" data-hover="HOME">HOME</a></li>
+
+            <li class="util_link_hover list_item"><a href="#destinations" data-hover="DESTINATIONS">DESTINATIONS</a>
+            </li>
+
+            <li class="util_link_hover list_item"><a href="#prices" data-hover="PRICES">PRICES</a></li>
+            <li class="util_link_hover list_item"><a href="#testimonials" data-hover="TESTIMONIALS">TESTIMONIALS</a></li>
+        </ul>
+        <button><i class="fa-solid fa-xmark | hamburger_cross"></i></button>
+    </aside>
+    <aside class="hamburger_drop_shadow hidden">
+        <!-- <button><i class="fa-solid fa-xmark cross"></i></button> -->
+    </aside>
+    <footer class="footer">
+        <!-- ACHIEVEMENTS SECTION -->
+        <section class="section_wrapper">
+
+            <div class="flex_center section | achievements_section">
+
+                <div class="achievements_container">
+                    <div class="overlay_left">
+                        <div class="achievements_content_container">
+                            <h2 class="heading_semibold | section_title achievements_title">NUMBERS DO THE TALKING FOR
+                                US</h2>
+                            <div class="actual_numbers">
+                                <div class="flex_center | top">
+                                    <div class="yrs_exp">
+                                        <h3 class="numbers" data-counter="10">0</h3>
+                                        <p class="caption">Years of experience</p>
+                                    </div>
+                                    <div class="tours_comp">
+                                        <h3 class="numbers" data-counter="1459">0</h3>
+                                        <p class="caption">Tours completed</p>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <h3 class="numbers" data-counter="10543">0</h3>
+                                    <p class="caption">Happy <br class="line_break">customers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section_wrapper | footer_connect_wrapper">
+
+            <div class="flex_center section | footer_connect_section">
+
+                <div class="flex_center | sitemap_cont">
+                    <ul class="flex_center sitemap_explore_cont">
+                        <li>
+                            <h4 class="sitemap_conts_headings">EXPLORE</h4>
+                        </li>
+                        <li class="util_link_hover"><a href="#" data-hover="Press">Press</a></li>
+                        <li class="util_link_hover"><a href="#" data-hover="Blogs">Blogs</a></li>
+                    </ul>
+
+                    <ul class="flex_center sitemap_connect_cont">
+                        <li>
+                            <h4 class="sitemap_conts_headings">CONNECT</h4>
+                        </li>
+                        <li class="util_link_hover"><a href="#" data-hover="Contact Us">Contact Us</a></li>
+                        <li class="util_link_hover"><a href="#" data-hover="Career">Career</a></li>
+                        <li class="util_link_hover"><a href="#" data-hover="Socials">Socials</a></li>
+                    </ul>
+
+                    <ul class="flex_center sitemap_help_cont">
+                        <li>
+                            <h4 class="sitemap_conts_headings">HELP</h4>
+                        </li>
+                        <li class="util_link_hover"><a href="#" data-hover="FAQ">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="subscribe_cont">
+                    <h4 class="sitemap_conts_headings">GET YOUR INBOX IN SHAPE</h4>
+                    <p>Be the first to know about exclusive deals, merch drops, newletter and more!</p>
+                    <div class="flex_center email_input_cont">
+                        <label for="email">
+                            <input type="email" id="email" class="email_input" placeholder="example@domain.com">
+                        </label>
+                        <button class="btn btn_gradient | email_submit_btn"><span>SUBMIT</span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="flex_center section | copyright_container">
+            <div class="flex_center | socials_cont">
+                <div class="footer_logo_container">
+                    <img src="./img/navbar_log.svg" alt="logo" />
+                </div>
+                <ul class="flex_center social_links">
+                    <li>
+                        <a href='#' class="flex_center"><i class="fab fa-facebook social_icon"></i> </a>
+                    </li>
+                    <li>
+                        <a href='#' class="flex_center"><i class="fab fa-instagram social_icon"></i> </a>
+                    </li>
+                    <li>
+                        <a href='#' class="flex_center"><i class="fab fa-twitter social_icon"></i> </a>
+                    </li>
+                    <li>
+                        <a href='#' class="flex_center"><i class="fab fa-linkedin social_icon"></i> </a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="copyright">
+                <p> &copy; 2023 Exploria. All rights reserved.</p>
+                <ul class="flex_center">
+                    <li class="util_link_hover">
+
+                        <a href="#" data-hover="Privacy policy">Privacy policy</a>
+                    </li>
+                    <li class="util_link_hover">
+
+                        <a href="#" data-hover="Terms & Services">Terms & Services</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="custom-shape-divider-bottom-1688843615">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+    </footer>
+</body>
+
+</html>

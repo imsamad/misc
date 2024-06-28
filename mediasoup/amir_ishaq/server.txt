@@ -1,0 +1,63 @@
+let worker = await mediasoup.createWorker({
+  rtcMaxPort: 2020,
+  rtcMinPort: 2000,
+});
+
+router = worker.createRouter({
+    mediaCodecs : [
+  {
+    kind: 'audio', // only 'audio' and 'video'
+    mimeType: 'audio/opus', // type/subtype
+    clockRate: 48000,
+    channels: 2,
+  },
+  {
+    kind: 'video',
+    mimeType: 'video/vp8',
+    clockRate: 90000,
+    // channels: 2,
+    parameters: {
+      'x-google-start-bitrate': 1000,
+    },
+  },
+]
+})
+
+{codecs, headerExtensions} = rtpCapabilities = router.rtpCapabilities
+
+
+
+// create device om client with rtpCapabilities;
+// device = new mediasoupClient.Device();
+// await device.load({ routerRtpCapabilities });
+
+< create WebRTC tpt >
+
+const webRtcTptOptions = {
+    listenIps: [
+      {
+        ip: '127.0.0.1',
+      },
+    ],
+    enableTcp: true,
+    enableUdp: true,
+    preferUdp: true,
+  };
+
+producerTransport = let tpt = await router.createWebRtcTransport(webRtcTptOptions);
+
+ cb({
+  params: {
+  id: tpt.id,
+  iceParameters: tpt.iceParameters,
+  iceCandidates: tpt.iceCandidates,
+  dtlsParameters: tpt.dtlsParameters,
+  },
+});
+
+// producerTransport = device.createSendTransport(params);
+
+// producer = await producerTransport.produce(params);
+
+// producer.on('trackended', () => {});
+// producer.on('transportclose', () => {});
